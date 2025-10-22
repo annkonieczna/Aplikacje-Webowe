@@ -1,15 +1,54 @@
 
-html {
- background-color: #DDBEAA;
- height: 100vh;
-}
-body {
- height: 100vh;
- margin: 0;
+html,body {
+    background-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .main-container {
  height: 100%;
  display: flex;
+ flex-direction: column; 
  align-items: center;
  justify-content: center;
+}
+
+
+.link1 {
+    color: blueviolet;
+}
+.link2 {
+    color:cornflowerblue;
+}
+.link3 {
+    color: rgb(71, 141, 88);
+}
+.title {
+    text-align: center;
+}
+img {
+    display: block;
+    margin: auto;
+    width: 35%;
+
+    
+}
+p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+table,th,td {
+    border: 3px solid darkblue ;
+    border-collapse: collapse;
+    margin: auto
+
+}
+
+th, td {
+  padding: 10px;
+}
+th {
+    background-color: rgb(187, 225, 227);
 }
