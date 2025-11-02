@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booster Pack | Magic: The Gathering</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Planeswalker's Guide</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="random-card.html" class="active">Random card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="random-card">
+    <h2>Otwórz swój booster pack!</h2>
+    <p>Kliknij przycisk, aby odkryć losową kartę — może trafisz legendarną!</p>
+
+    <button id="openPackBtn" class="btn">Otwórz booster</button>
+
+    <div id="packAnimation" class="pack hidden">
+      <div class="sparkle"></div>
+      <p class="packText">Otwieranie...</p>
+    </div>
+
+    <div id="cardDisplay" class="card-display hidden">
+      <img id="cardImage" src="" alt="Wylosowana karta">
+      <h3 id="cardName"></h3>
+      <p id="cardRarity"></p>
+      <p id="cardDesc"></p>
+    </div>
+  </main>
+
+  <footer>
+  <div class="footer-content">
+    <img src="images/footer-banner.png" alt="Magic banner" class="footer-img left">
+    <div class="footer-text">
+      <p>Anna Konieczna | Magic: The Gathering Fan Page</p>
+      <p id="clock"></p>
+    </div>
+    <img src="images/footer-banner.png" alt="Magic banner" class="footer-img right">
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/random-card-animated.js"></script>
+</body>
+</html>

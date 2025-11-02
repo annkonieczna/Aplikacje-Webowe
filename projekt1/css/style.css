@@ -1,0 +1,533 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Ustawienia Navbar'a siuuu */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+}
+header {
+  overflow: visible;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+}
+
+
+nav h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #d4af37;
+}
+
+nav ul {
+  list-style: none; /* Usunie mi znaczniki z listyyy :00 */
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none; /*Usuwa mi podkreślenia*/
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #d4af37;
+}
+
+
+
+/*Przypominajka: 
+element z position absolute jest pozycjonowany względem najbliższego przodka 
+z pozycjonowaniem relative*/
+/*Pozycjonujemy tu wszystko wzgledem mana circle*/
+.mana-circle {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  width: 200px;
+  z-index: 2; /*Priorytet pojawiania się */
+  filter: drop-shadow(0 0 10px #222);
+}
+
+.mana-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: spin 30s linear infinite;
+  transform-origin: center center; /*Wokół jakiego punktu robimy transformacje (my sobie obracamy woooo)*/
+}
+
+/* Ułożenie many */
+.mana-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center; /*many będą nam się obracać wokół swojego środka*/
+}
+
+.mana {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #222);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/*Pozycje w kole*/
+.white { 
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-190px); }
+.blue  { 
+    transform: translate(-50%, -50%) rotate(72deg) translateY(-190px); }
+.black { 
+    transform: translate(-50%, -50%) rotate(144deg) translateY(-190px); }
+.red   { 
+    transform: translate(-50%, -50%) rotate(216deg) translateY(-190px); }
+.green { 
+    transform: translate(-50%, -50%) rotate(288deg) translateY(-190px); }
+
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mana:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 15px gold);
+}
+
+.mana.zoom {
+  animation: zoomAndFlash 0.6s ease forwards;
+  z-index: 3000;
+}
+
+/*animacja błysku i powiększenia */
+@keyframes zoomAndFlash {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #fff);
+  }
+  50% {
+    transform: scale(2);
+    filter: drop-shadow(0 0 50px gold) brightness(2);
+  }
+  100% {
+    transform: scale(3);
+    filter: drop-shadow(0 0 100px gold) brightness(3);
+  }
+}
+
+/*znikanie strony */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* Hero section */
+.hero h2, .video-content h3, .gallery h2 {
+  font-size: 2rem;
+  color: #d4af37;
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+}
+
+/*library section*/
+
+.library {
+  display: flex; 
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  perspective: 800px;
+}
+.libleft {
+
+  margin-top: 150px;
+
+}
+.libright {
+  margin-top: 150px;
+  right: 0 
+}
+
+.book { 
+  width: 280px;             
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: relative;
+
+}
+.libleft .book:hover {
+  transform: translateX(50px) rotateY(-10deg);
+  filter: drop-shadow(0 0 15px gold);
+
+}
+.libright .book:hover {
+  transform: translateX(-50px) rotateY(10deg);
+  filter: drop-shadow(0 0 15px gold);
+}
+
+.welcome-letter {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 700px;
+}
+
+.letter-button {
+  background: none;
+  border: none;
+  cursor:pointer;
+  transition: transform 0.3s ease;
+}
+
+.letter-button:hover {
+  transform: scale(1.10);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+.envelope-icon {
+  width: 150px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+/* efekt otwierania koperty */
+.letter-button.open .envelope-icon {
+  transform: rotateX(180deg);
+}
+
+.letter-content {
+  margin-top: 1rem;
+  background-color: #222;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #f5f5f5;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.6s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.letter-content.show {
+  max-height: 800px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.hidden {
+  display: block; 
+}
+
+
+
+/*---------------------------------------------*/
+
+/* Gallery grid */
+.cardsgallery {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 280px;
+  perspective: 1000px; /* widoczna głębia */
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.cardsgallery img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* ukrywa tył */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-front img, .card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card:hover .card-inner {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+/*Video*/
+.video-content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.video {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+
+/* Contact form */
+.contact h2 {
+  font-size: 2rem;
+  color: #d4af37;
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="submit"] {
+  background: #d4af37;
+  color: #111;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #fff;
+}
+
+footer {
+  background-color: #000000;
+  color: #fdd965;
+  /* color: #d4af37; */
+  padding: 1rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* odstęp między obrazkami a tekstem */
+  flex-wrap: wrap; /* na telefonie ułoży się pionowo */
+  text-align: center;
+}
+
+.footer-text {
+  min-width: 250px;
+}
+
+.footer-img {
+  width: 390px;
+  height: auto;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+@media (max-width: 700px) {
+  .footer-img {
+    width: 100px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+/* Responsywność */
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .random-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.random-card .btn {
+  background: #d4af37;
+  color: #111;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.random-card .btn:hover {
+  background: #fff;
+  color: #111;
+} */
+
+/* --- Booster pack animation --- */
+/* .pack {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.packText {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+}
+
+.sparkle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0) 70%);
+  animation: sparkleAnim 1s infinite alternate;
+}
+
+@keyframes sparkleAnim {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.5); opacity: 1; }
+} */
+
+
+/* --- Card display (final version) ---
+.card-display {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.6s;
+  text-align: center;
+}
+
+.card-display img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  transition: transform 0.3s;
+}
+
+.card-display img:hover {
+  transform: scale(1.05);
+}
+
+.card-display h3 {
+  color: #d4af37;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.5rem;
+}
+
+/* Efekt flip */
+.flip {
+  transform: rotateY(180deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
