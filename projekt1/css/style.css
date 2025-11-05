@@ -79,6 +79,7 @@ z pozycjonowaniem relative*/
   transform-origin: center center; /*many będą nam się obracać wokół swojego środka*/
 }
 
+
 .mana {
   width: 100px;
   height: auto;
@@ -255,7 +256,47 @@ body.fade-out {
   display: block;
 }
 
+
 /* ---Responsywność dla telefonów --- */
+@media (max-width:1200px) and (min-width:900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-content img,
+  .footer-content .footer-text {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 900px) {
+  .mana-circle {
+    width: 380px;
+    height: 380px;
+  }
+
+  .mana {
+    width: 80px;
+  }
+
+  .white { transform: translate(-50%, -50%) rotate(0deg) translateY(-130px); }
+  .blue  { transform: translate(-50%, -50%) rotate(72deg) translateY(-130px); }
+  .black { transform: translate(-50%, -50%) rotate(144deg) translateY(-130px); }
+  .red   { transform: translate(-50%, -50%) rotate(216deg) translateY(-130px); }
+  .green { transform: translate(-50%, -50%) rotate(288deg) translateY(-130px); }
+
+  .library {
+    transform: translateY(-45%);
+  }
+
+  .book {
+    width: 220px;
+    height: 60px;
+  }
+}
+
 @media (max-width: 900px) {
   .contener {
     display: flex;
@@ -329,6 +370,16 @@ body.fade-out {
   .hero {
     padding: 3rem 1rem;
   }
+  
+}
+@media(max-width:620px) {
+  .video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+
+  }
 }
 
 /*---------------------------------------------*/
@@ -399,6 +450,7 @@ body.fade-out {
 .video {
   margin-bottom: 2rem;
   margin-top: 2rem;
+  
 }
 
 /* Contact form */
