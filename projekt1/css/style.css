@@ -280,13 +280,12 @@ body.fade-out {
     margin: 0.3rem;
     transition: transform 0.3s, filter 0.3s;
   }
-  .libleft .book:hover,
-  .libright .book:hover {
-    filter: drop-shadow(0 0 10px gold);
+  .library.libleft .book:hover,
+  .library.libright .book:hover {
     transform: none !important;
     rotate: none !important;
+    filter: drop-shadow(0 0 10px gold) !important;
   }
-
   .mana-circle {
     width: 250px;
     height: 250px;
@@ -313,6 +312,22 @@ body.fade-out {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+  .footer-img {
+    width: 100px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
   }
 }
 
@@ -448,28 +463,6 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-@media (max-width: 700px) {
-  .footer-img {
-    width: 100px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-/* Responsywność */
-@media (max-width: 700px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero {
-    padding: 3rem 1rem;
-  }
-}
 
 /* Efekt flip */
 .flip {
