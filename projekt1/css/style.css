@@ -288,11 +288,11 @@ body.fade-out {
   .mana {
     width: 60px;
   }
-  .white { transform: translate(-50%, -50%) rotate(0deg) translateY(-110px); }
-  .blue  { transform: translate(-50%, -50%) rotate(72deg) translateY(-110px); }
-  .black { transform: translate(-50%, -50%) rotate(144deg) translateY(-110px); }
-  .red   { transform: translate(-50%, -50%) rotate(216deg) translateY(-110px); }
-  .green { transform: translate(-50%, -50%) rotate(288deg) translateY(-110px); }
+  .white { transform: translate(-50%, -50%) rotate(0deg) translateY(-70px); }
+  .blue  { transform: translate(-50%, -50%) rotate(72deg) translateY(-70px); }
+  .black { transform: translate(-50%, -50%) rotate(144deg) translateY(-70px); }
+  .red   { transform: translate(-50%, -50%) rotate(216deg) translateY(-70px); }
+  .green { transform: translate(-50%, -50%) rotate(288deg) translateY(-70px); }
 
   .logo {
     width: 100px;
