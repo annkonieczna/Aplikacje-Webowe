@@ -282,9 +282,9 @@ body.fade-out {
   }
   .libleft .book:hover,
   .libright .book:hover {
-    transform: scale(1.05);
-    rotate: none;
     filter: drop-shadow(0 0 10px gold);
+    transform: none !important;
+    rotate: none !important;
   }
 
   .mana-circle {
