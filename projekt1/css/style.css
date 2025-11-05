@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   background-color: #222;
   color: #fff;
 }
@@ -20,9 +20,8 @@ header {
   position: sticky;
 }
 
-
 nav h1 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
   color: #d4af37;
 }
 
@@ -38,11 +37,10 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: #d4af37;
 }
-
-
 
 /*Przypominajka: 
 element z position absolute jest pozycjonowany względem najbliższego przodka 
@@ -89,21 +87,29 @@ z pozycjonowaniem relative*/
 }
 
 /*Pozycje w kole*/
-.white { 
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-190px); }
-.blue  { 
-    transform: translate(-50%, -50%) rotate(72deg) translateY(-190px); }
-.black { 
-    transform: translate(-50%, -50%) rotate(144deg) translateY(-190px); }
-.red   { 
-    transform: translate(-50%, -50%) rotate(216deg) translateY(-190px); }
-.green { 
-    transform: translate(-50%, -50%) rotate(288deg) translateY(-190px); }
-
+.white {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-170px);
+}
+.blue {
+  transform: translate(-50%, -50%) rotate(72deg) translateY(-170px);
+}
+.black {
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-170px);
+}
+.red {
+  transform: translate(-50%, -50%) rotate(216deg) translateY(-170px);
+}
+.green {
+  transform: translate(-50%, -50%) rotate(288deg) translateY(-170px);
+}
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .mana:hover {
@@ -139,25 +145,27 @@ body.fade-out {
 }
 
 /* Hero section */
-.hero h2, .video-content h3, .gallery h2 {
+.hero h2,
+.video-content h3,
+.gallery h2 {
   font-size: 2rem;
   color: #d4af37;
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
   text-align: center;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
 }
 
 /*library section*/
 
 .library {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 50%;
@@ -165,28 +173,24 @@ body.fade-out {
   perspective: 800px;
 }
 .libleft {
-
   margin-top: 150px;
-
 }
 .libright {
   margin-top: 150px;
-  right: 0 
+  right: 0;
 }
 
-.book { 
-  width: 280px;             
+.book {
+  width: 280px;
   height: 80px;
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   position: relative;
-
 }
 .libleft .book:hover {
   transform: translateX(50px) rotateY(-10deg);
   filter: drop-shadow(0 0 15px gold);
-
 }
 .libright .book:hover {
   transform: translateX(-50px) rotateY(10deg);
@@ -202,12 +206,12 @@ body.fade-out {
 .letter-button {
   background: none;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .letter-button:hover {
-  transform: scale(1.10);
+  transform: scale(1.1);
   filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
 }
 
@@ -229,7 +233,7 @@ body.fade-out {
   border-radius: 12px;
   padding: 1.5rem;
   color: #f5f5f5;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.1rem;
   line-height: 1.6;
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
@@ -248,7 +252,7 @@ body.fade-out {
 }
 
 .hidden {
-  display: block; 
+  display: block;
 }
 
 /* ---Responsywność dla telefonów --- */
@@ -300,7 +304,6 @@ body.fade-out {
   }
 }
 
-
 /*---------------------------------------------*/
 
 /* Gallery grid */
@@ -335,7 +338,8 @@ body.fade-out {
   border-radius: 10px;
   transition: transform 0.3s;
 }
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -344,7 +348,8 @@ body.fade-out {
   overflow: hidden;
 }
 
-.card-front img, .card-back img {
+.card-front img,
+.card-back img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -359,25 +364,21 @@ body.fade-out {
 
 /*Video*/
 .video-content {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 .video {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
-
 /* Contact form */
 .contact h2 {
   font-size: 2rem;
   color: #d4af37;
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
   text-align: center;
 }
 form {
@@ -389,7 +390,9 @@ form {
   margin: auto;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   padding: 0.5rem;
   border-radius: 5px;
   border: none;
@@ -417,8 +420,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
-  flex-wrap: wrap; 
+  gap: 1rem;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -433,8 +436,6 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-
 @media (max-width: 700px) {
   .footer-img {
     width: 100px;
@@ -445,7 +446,6 @@ footer {
     gap: 0.5rem;
   }
 }
-
 
 /* Responsywność */
 @media (max-width: 700px) {
@@ -459,13 +459,16 @@ footer {
   }
 }
 
-
 /* Efekt flip */
 .flip {
   transform: rotateY(180deg);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-} 
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
