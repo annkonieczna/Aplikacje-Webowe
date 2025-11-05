@@ -278,6 +278,13 @@ body.fade-out {
     width: 120px;
     height: 50px;
     margin: 0.3rem;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  .libleft .book:hover,
+  .libright .book:hover {
+    transform: scale(1.05);
+    rotate: none;
+    filter: drop-shadow(0 0 10px gold);
   }
 
   .mana-circle {
