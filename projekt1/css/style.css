@@ -251,6 +251,54 @@ body.fade-out {
   display: block; 
 }
 
+/* ---Responsywność dla telefonów --- */
+@media (max-width: 900px) {
+  .contener {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .library {
+    position: static; /* Nie absolutne */
+    flex-direction: row; /* Ustaw książki w rządku */
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: none;
+    margin: 0;
+  }
+
+  .book {
+    width: 120px;
+    height: 50px;
+    margin: 0.3rem;
+  }
+
+  .mana-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .mana {
+    width: 60px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 /*---------------------------------------------*/
@@ -369,8 +417,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* odstęp między obrazkami a tekstem */
-  flex-wrap: wrap; /* na telefonie ułoży się pionowo */
+  gap: 1rem; 
+  flex-wrap: wrap; 
   text-align: center;
 }
 
@@ -411,116 +459,6 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .random-card {
-  text-align: center;
-  padding: 2rem;
-}
-
-.random-card .btn {
-  background: #d4af37;
-  color: #111;
-  font-size: 1.1rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.random-card .btn:hover {
-  background: #fff;
-  color: #111;
-} */
-
-/* --- Booster pack animation --- */
-/* .pack {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.packText {
-  color: #d4af37;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  letter-spacing: 2px;
-}
-
-.sparkle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0) 70%);
-  animation: sparkleAnim 1s infinite alternate;
-}
-
-@keyframes sparkleAnim {
-  from { transform: scale(1); opacity: 0.7; }
-  to { transform: scale(1.5); opacity: 1; }
-} */
-
-
-/* --- Card display (final version) ---
-.card-display {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  transition: transform 0.6s;
-  text-align: center;
-}
-
-.card-display img {
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-  transition: transform 0.3s;
-}
-
-.card-display img:hover {
-  transform: scale(1.05);
-}
-
-.card-display h3 {
-  color: #d4af37;
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 1.5rem;
-}
 
 /* Efekt flip */
 .flip {

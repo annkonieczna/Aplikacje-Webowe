@@ -8,7 +8,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Walidacja formularza + zapamiętanie emaila
+// Walidacja formularza i zapamiętanie emaila
 const form = document.getElementById('contactForm');
 if (form) {
   const emailField = document.getElementById('email');
@@ -21,12 +21,12 @@ if (form) {
     const message = document.getElementById('message').value.trim();
 
     if (!email || !message) {
-      document.getElementById('formResponse').textContent = 'Uzupełnij wszystkie pola!';
+      document.getElementById('formResponse').textContent = 'Fill in all the required boxes!';
       return;
     }
 
     localStorage.setItem('userEmail', email);
-    document.getElementById('formResponse').textContent = 'Dziękujemy za wiadomość!';
+    document.getElementById('formResponse').textContent = 'Thank you for your message!';
     form.reset();
   });
 }
@@ -63,7 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lista losowych frontów (dodaj swoje pliki)
   const cardImages = [
     "images/sacred-cat.jpg",
-    "images/one-with-nothing.jpg"
+    "images/one-with-nothing.jpg",
+    "images/arbor-elf.png",
+    "images/azorius-huildgate.png",
+    "images/brainstorm.jpg",
+    "images/counterspell.jpg",
+    "images/grab-the-prize.jpg",
+    "images/journey-to-nowhere.png",
+    "images/lorien-revealed.jpg",
+    "images/modern-age.png",
+    "images/outlaw-medic.jpg",
+    "images/preordain.png",
+    "images/prismatic-strands.png",
+    "images/squadron-hawk.png",
+
   ];
   
   cards.forEach(card => {
