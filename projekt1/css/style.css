@@ -384,7 +384,7 @@ body.fade-out {
 
 /*---------------------------------------------*/
 
-/* Gallery grid */
+/* Gallery karty */
 .cardsgallery {
   display: flex;
   flex-direction: row;
@@ -396,7 +396,7 @@ body.fade-out {
 .card {
   width: 200px;
   height: 280px;
-  perspective: 1000px; /* widoczna głębia */
+  /* perspective: 1000px; widoczna głębia */
 }
 .card-inner {
   position: relative;

@@ -1,9 +1,8 @@
 // Zegar w stopce
 function updateClock() {
   const now = new Date();
-  document.querySelectorAll("#clock").forEach(c => {
-    c.textContent = now.toLocaleTimeString();
-  });
+  const clock = document.getElementById("clock");
+  clock.textContent = now.toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
 updateClock();
@@ -18,18 +17,20 @@ if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const email = emailField.value.trim();
-    const message = document.getElementById('message').value.trim();
+    const message = document.getElementById('message').value.trim(); //trim usunie zbędne spacje na początku i końcu (fajniutkie do walidacji)
 
     if (!email || !message) {
       document.getElementById('formResponse').textContent = 'Fill in all the required boxes!';
       return;
     }
 
-    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userEmail', email); // zapiszą się oba pola w przeglądarce 
     document.getElementById('formResponse').textContent = 'Thank you for your message!';
     form.reset();
   });
 }
+
+//efekty do many 
 
 document.addEventListener("DOMContentLoaded", () => {
   const manaLinks = document.querySelectorAll(".mana-link");
@@ -41,12 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = link.querySelector(".mana");
       img.classList.add("zoom");
 
-      // Dodaj efekt zanikania całej strony po chwili
+      // Efekt zanikania całej strony po chwili
       setTimeout(() => {
         document.body.classList.add("fade-out");
       }, 300);
 
-      // Po zakończeniu efektu przejdź na stronę
+      // Po zakończeniu efektu przechodzimy na stronę
       setTimeout(() => {
         window.location.href = link.href;
       }, 900);
@@ -84,12 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     card.addEventListener("click", () => {
       if (!card.classList.contains("flipped")) {
-        // Wylosuj nową kartę
+        // Losujemy nową kartę
         const randomImage = cardImages[Math.floor(Math.random() * cardImages.length)];
         backImg.src = randomImage;
       }
       // Obrót
-      card.classList.toggle("flipped");
+      card.classList.toggle("flipped"); // usuwamy lub dodajemy klasę flipped
     });
   });
 });
