@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product list</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<header>
+            <div>
+			<label for="filter">Filtrowanie:</label>
+			<input type="text" id="filter" placeholder="Wpisz frazę" />
+            </div>
+            <div>
+			<label for="sort">Sortowanie:</label>
+			<select id="sort">
+				<option value="original">Oryginalna kolejność</option>
+				<option value="asc">Rosnąco</option>
+				<option value="desc">Malejąco</option>
+			</select>
+            </div>
+			<button id="filterButton">Filtruj</button>
+		</header>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>Zdjęcie</th>
+					<th>Tytuł</th>
+					<th>Opis</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</body>
+</html>

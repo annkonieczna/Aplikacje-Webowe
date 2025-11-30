@@ -1,0 +1,45 @@
+#list {
+    border: black 4px solid;
+    background-color: grey;
+    padding: 10px;
+}
+
+.list-item {
+    display: flex;
+    font-size: 25px;
+    border: black 2px solid;
+    background-color: rgb(210, 88, 88);
+    padding: 5px;
+    margin: 5px;
+}
+
+.list-item-done {
+    display: flex;
+    font-size: 25px;
+    border: black 2px solid;
+    background-color: rgb(118, 207, 94);
+    padding: 5px;
+    margin: 5px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    border: black 2px solid;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.userinfo {
+    display: none;
+    font-size: 15px;
+}
+.userinfo-done {
+    display: flex;
+    font-size: 15px;
+}

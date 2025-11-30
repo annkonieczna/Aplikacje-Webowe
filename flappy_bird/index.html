@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy bird</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="board" width="480" height="640"></canvas>
+    <div id="ui">
+      <div id="welcome" class="overlay">
+        
+        <img src="./assets/assets/UI/message.png">
+        <button id="startBtn">Zagraj</button>
+      </div>
+      
+      <div id="gameOver" class="overlay">
+        <img src="./assets/assets/UI/gameover.png">
+        <div id="lastScore"></div>
+        <div id="bestScore"></div>
+        <p>Top 5:</p>
+        <ol id="top5"></ol>
+        <button id="retryBtn">Retry</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

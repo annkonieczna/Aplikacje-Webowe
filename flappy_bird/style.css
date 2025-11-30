@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#board {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+
+
+/* overlayy na całym ekranie */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/assets/FlappyBird/full_bgr.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+    display: none;
+    gap: 15px;
+}
+
+
+
+.overlay p {
+    margin: 4px 0;
+    font-size: 18px;
+}
+
+.overlay button {
+    padding: 12px 24px;
+    font-size: 20px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* konkretne overlaye */
+#welcome {
+
+ }
+
+#gameOver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+    display: none;
+}
+#retryBtn  {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 15px gold);
+
+}
+#startBtn {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 15px rgb(244, 16, 16));
+}
+#retryBtn:hover {
+    transform: scale(1.05);
+}
+#startBtn:hover {
+    transform: scale(1.05);
+}
+
+

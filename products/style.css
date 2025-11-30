@@ -1,0 +1,49 @@
+html,body {
+    background-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+header {
+    display: flex;
+	align-items: center;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	background-color: rgb(132, 132, 212);
+	gap: 10px;
+    margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+header input,
+header select,
+header button {
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+}
+header button {
+	border: none;
+	cursor: pointer;
+}
+header button:hover {
+	filter: drop-shadow(0 0 15px black);
+    transform: scale(1.1)
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 8px;
+	overflow: hidden;
+    border: 2px solid black;
+}
+img {
+	width: 80px;
+	height: auto;
+	border-radius: 5px;
+}
